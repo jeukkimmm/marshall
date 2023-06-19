@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="logo.jpg" alt="#" width="200px"></div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">MENU</a></li>
+                <li><a href="index2.html">ABOUT</a></li>
+                <li><a href="#l">SHOP</a></li>
+                <li><a href="#">NEWS</a></li>
+            </ul>
+        </nav>
+        <div class="bar"><span class="material-symbols-outlined" style="color: white; font-size: 42px;">
+            menu
+            </span></div>
+    </div>
+
+    <div class="conB">
+        <div class="sectionA">
+            <img src="speak1.png" alt="#" width="480px">
+            <div class="conD">
+            <div class="colorA"></div>
+            <div class="colorB"></div>
+        </div>
+        </div>
+        <div class="sectionB">
+            <p class="p4">EMERTION DIAMOND SPEAKER</p>
+            <p class="p6">$179</p>
+            <div class="boxC">
+                <div class="boxD">
+            <span class="material-symbols-outlined">
+                favorite
+                </span>
+                </div>
+            <div class="amount">
+            <span class="plus">
+                +
+                </span>
+                <h3>1</h3>
+            <span class="minus">
+                -
+                </span>    
+                </div>
+                </div>
+            <div class="boxB">
+                ADD TO CART
+            </div>
+        </div>
+
+    </div>
+
+    <div class="s2">
+        <p class="p4">FIND MORE</p>
+    <div class="s6">
+        <img class="A" src="rect1.png" alt="#" width="360px">
+        <img class="B" src="rect3.png" alt="#" width="360px">
+        <img class="C" src="rect4.png" alt="#" width="360px">
+        <img class="D" src="rect5.png" alt="#" width="360px">
+    </div>
+
+        <div class="foot">
+    </div>
+
+    <script>
+        const OneTag = document.querySelector(".A");
+        const TwoTag = document.querySelector(".B");
+        const ThreeTag = document.querySelector(".C");
+        const FourTag = document.querySelector(".D");
+
+        OneTag.addEventListener("click", function(){
+
+            OneTag.classList.toggle("hover");
+
+            if(OneTag.classList.contains("hover")){
+                OneTag.src = "rect1.png"
+            }else{
+                OneTag.src = "rect2.png"
+            }
+        });
+
+        TwoTag.addEventListener("click", function(){
+
+            TwoTag.classList.toggle("hover");
+
+            if(TwoTag.classList.contains("hover")){
+                TwoTag.src = "rect3.png"
+            }else{
+                TwoTag.src = "rect3.1.png"
+            }
+        })
+
+        ThreeTag.addEventListener("click", function(){
+
+            ThreeTag.classList.toggle("hover");
+
+            if(ThreeTag.classList.contains("hover")){
+                ThreeTag.src = "rect4.png"
+            }else{
+                ThreeTag.src = "rect4.1.png"
+            }
+        })
+
+        FourTag.addEventListener("click", function(){
+
+            FourTag.classList.toggle("hover");
+
+            if(FourTag.classList.contains("hover")){
+                FourTag.src = "rect5.png"
+            }else{
+                FourTag.src = "rect5.1.png"
+            }
+        })
+
+        const plusTag = document.querySelector(".amount .plus");
+        const minusTag = document.querySelector(".amount .minus");
+        const numberTag = document.querySelector("h3");
+        const imgtwoTag = document.querySelector(".sectionA img");
+
+        let myNumber = 0;
+        minusTag.addEventListener("click", function(){
+
+            myNumber--
+
+            numberTag.innerHTML = myNumber;
+
+            if(myNumber < 2){
+                myNumber = 1;
+            }
+        })
+
+        plusTag.addEventListener("click", function(){
+
+
+        myNumber++
+
+        numberTag.innerHTML = myNumber;
+})
+
+        const blackTag = document.querySelector(".colorA");
+        const whiteTag = document.querySelector(".colorB");
+
+        blackTag.addEventListener("click", function(){
+            
+
+            imgtwoTag.src = "speak2.png";
+        })
+
+        whiteTag.addEventListener("click", function(){
+            
+
+            imgtwoTag.src = "speak1.png";
+        })
+
+        const heartTag = document.querySelector(".boxD");
+        
+        heartTag.addEventListener("click",function(){
+
+            heartTag.classList.toggle("play");
+        })
+
+    </script>
+</body>
+</html>
